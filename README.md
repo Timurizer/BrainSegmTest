@@ -23,7 +23,7 @@ In order to increase the contrast of the image, it was clipped between -200 and 
 
 ## Pipeline
 
-Since data contains а limited number of patients, data of one patient was immediately taken as a validation
+Since data contains а limited number of patients with a slight difference in quantity of slices for each patient, data of one patient was immediately taken as a validation
 data. Other patients were taken for train data.
 
 I decided to use the fact that the brain is symmetrical, so only 10 classes were used to train model.
