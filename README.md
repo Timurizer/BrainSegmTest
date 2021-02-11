@@ -31,7 +31,7 @@ Class labels above 10 was mapped to it's analogs from another hemisphere.
 
 ## Sampling
 To make sure that samples of each class are present in each epoch, a custom
-Sampler was implemented. Sampler contains class - img list data and 
+Sampler was implemented. Sampler contains class - img list data mapping and 
 guarantees that desired amount of samples for each class are selected for training.
 
 ## Augmentation
@@ -52,13 +52,14 @@ All taken from "Albumentations" library.
  
 
 ## Model
-FPN was chosen because it hasalready shown its efficiency in segmentation tasks.[[1]](http://presentations.cocodataset.org/ECCV18/COCO18-Panoptic-Caribbean.pdf), [[2]](https://arxiv.org/abs/1901.02446) and is competitive with state-of-the-art models.
+FPN was chosen because it has already shown its efficiency in segmentation tasks ([[1]](http://presentations.cocodataset.org/ECCV18/COCO18-Panoptic-Caribbean.pdf), [[2]](https://arxiv.org/abs/1901.02446)), and is competitive with state-of-the-art models.
 
 I used segmentation_models_pytorch implementation of FPN along with the efficientnet-b0 encoder. 
 Encoder was chosen based on the fact that it was pretrained on 512x512 data just as data at this case.
 It is also the most lightweight of all efficientnet encoders provided by segmentation_models_pytorch.
 
-As a loss function, BCE + LogDice loss was implemented.
+As a loss function, BCE + LogDice loss was implemented.  
+As a learning rate scheduler, Torch's ReduceLROnPlateau was used.
 
 This model achieved maximum IoU score of 0.823.
 
