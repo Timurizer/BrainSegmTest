@@ -18,10 +18,16 @@ The solution was to set pixel value as -1024 duiring rotation:
 <img src="https://github.com/Timurizer/BrainSegmTest/blob/main/imgs/defaultPixelValue.PNG" width="250">
 
 
-In order to increase the contrast of the image, it was clipped between -200 and 300 and scaled.
-The final preprocessed images' value distribution goes as follows:
+In order to increase the contrast of the image, it was clipped between -200 and 300 and scaled:  
+<img src="https://github.com/Timurizer/BrainSegmTest/blob/main/imgs/crop.png" width="500">
 
-<img src="https://github.com/Timurizer/BrainSegmTest/blob/main/imgs/afterPreprocess.PNG" width="500">
+## Pipeline
+
+Since data contains а limited number of patients, data of one patient was immediately taken as a validation
+data. Other patients were taken for train data.
+
+I decided to use the fact that the brain is symmetrical, so only 10 classes were used to train model.
+Class labels above 10 was mapped to it's analogs from another hemisphere.
 
 ## Sampling
 To make sure that samples of each class are present in each epoch, a custom
@@ -54,8 +60,10 @@ It is also the most lightweight of all efficientnet encoders provided by segment
 
 As a loss function, BCE + LogDice loss was implemented.
 
+This model achieved maximum IoU score of 0.823.
 
-<img src="https://github.com/Timurizer/BrainSegmTest/blob/main/imgs/trainVisualization.PNG" width="250">
+Training visualizations:  
+<img src="https://github.com/Timurizer/BrainSegmTest/blob/main/imgs/trainVisualization.PNG" width="700">
 
 <img src="https://github.com/Timurizer/BrainSegmTest/blob/main/imgs/3d.PNG" width="250">
 
