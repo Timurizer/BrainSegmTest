@@ -61,14 +61,14 @@ It is also the most lightweight of all efficientnet encoders provided by segment
 As a loss function, BCE + LogDice loss was implemented.  
 As a learning rate scheduler, Torch's ReduceLROnPlateau was used.
 
-This model achieved mean IoU score of 0.79144084 on all classes .
+This model achieved mean IoU of 0.79144084 on all classes .
 
 Training visualizations:  
 <img src="https://github.com/Timurizer/BrainSegmTest/blob/main/imgs/trainVisualization.PNG" width="700">
 
 
 
-The score on each class can be seen below:  
+The IoU on each class can be seen below:  
 <img src="https://github.com/Timurizer/BrainSegmTest/blob/main/imgs/results.PNG" width="700">
 
 
