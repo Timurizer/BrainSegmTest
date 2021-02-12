@@ -71,5 +71,8 @@ Training visualizations:
 The IoU on each class can be seen below:  
 <img src="https://github.com/Timurizer/BrainSegmTest/blob/main/imgs/results.PNG" width="700">
 
-
+<br/>
+<br/>
+<br/>
+<img src="https://github.com/Timurizer/BrainSegmTest/blob/main/imgs/3d.PNG" width="500">
 
