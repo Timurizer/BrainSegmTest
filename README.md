@@ -68,7 +68,7 @@ Training visualizations:
 
 
 
-The score on each class can be seen below:
+The score on each class can be seen below:  
 <img src="https://github.com/Timurizer/BrainSegmTest/blob/main/imgs/results.PNG" width="700">
 
 
